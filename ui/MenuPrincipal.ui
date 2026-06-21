@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* ==========================================================================
+   VENTANA PRINCIPAL Y FONDO / MAIN WINDOW &amp; CORE
+   ========================================================================== */
+QMainWindow {
+    background-color: #f8fafc; /* Gris pizarra ultra claro (Slate 50), súper limpio */
+}
+
+QWidget {
+    font-family: &quot;Inter&quot;, &quot;Segoe UI&quot;, &quot;Helvetica Neue&quot;, Arial, sans-serif;
+    font-size: 13px;
+    color: #0f172a; /* Azul marino/pizarra casi negro (Slate 900) para máxima legibilidad */
+}
+
+/* ==========================================================================
+   BARRA DE MENÚ SUPERIOR / QMENUBAR
+   ========================================================================== */
+QMenuBar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0; /* Línea divisoria muy fina y sutil (Slate 200) */
+    padding: 2px 6px;
+}
+
+QMenuBar::item {
+    background-color: transparent;
+    padding: 6px 12px;
+    border-radius: 4px;
+    color: #334155; /* Gris corporativo (Slate 700) */
+    font-weight: 500;
+}
+
+/* Estado: Pasar el cursor sobre el menú superior */
+QMenuBar::item:selected {
+    background-color: #f1f5f9; /* Gris sutil de selección */
+    color: #0f172a;
+}
+
+/* Estado: Al hacer clic */
+QMenuBar::item:pressed {
+    background-color: #e2e8f0;
+}
+
+/* ==========================================================================
+   MENÚS DESPLEGABLES / QMENU
+   ========================================================================== */
+QMenu {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px; /* Esquinas ligeramente más curvas para un look moderno */
+    padding: 4px 0px;
+}
+
+QMenu::item {
+    padding: 6px 28px 6px 20px;
+    border-radius: 4px;
+    margin: 2px 6px;
+    color: #334155;
+}
+
+/* Selección en el menú: Color Esmeralda Premium */
+QMenu::item:selected {
+    background-color: #059669; /* Verde Esmeralda tecnológico */
+    color: #ffffff;            /* Texto blanco brillante */
+}
+
+QMenu::separator {
+    height: 1px;
+    background-color: #e2e8f0;
+    margin: 6px 10px;
+}
+
+/* ==========================================================================
+   BOTONES / QPUSHBUTTON
+   ========================================================================== */
+QPushButton {
+    background-color: #0f172a; /* Fondo Slate oscuro (Botón estilo Apple/Stripe) */
+    color: #ffffff;
+    font-weight: 600;
+    border: 1px solid #1e293b;
+    border-radius: 6px;
+    padding: 8px 16px;
+    min-height: 18px;
+}
+
+/* Estado: Hover (Pasar el cursor) */
+QPushButton:hover {
+    background-color: #1e293b; /* Se aclara sutilmente */
+    border-color: #334155;
+}
+
+/* Estado: Pressed (Clic) */
+QPushButton:pressed {
+    background-color: #0f172a;
+    padding-left: 9px; /* Efecto físico micro-interactivo */
+    padding-top: 9px;
+}
+
+QPushButton:disabled {
+    background-color: #f1f5f9;
+    color: #94a3b8;
+    border: 1px solid #e2e8f0;
+}
+
+/* ==========================================================================
+   CAMPOS DE TEXTO / QLINEEDIT
+   ========================================================================== */
+QLineEdit {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1; /* Borde limpio */
+    border-radius: 6px;
+    padding: 6px 12px;
+    color: #0f172a;
+    selection-background-color: #059669; /* Selección esmeralda */
+    selection-color: #ffffff;
+}
+
+/* Cuando el usuario está escribiendo */
+QLineEdit:focus {
+    border: 2px solid #059669; /* Borde verde esmeralda enfocado */
+}
+
+/* ==========================================================================
+   ETIQUETAS / QLABEL
+   ========================================================================== */
+QLabel {
+    background-color: transparent;
+    font-weight: 500;
+    color: #475569; /* Slate medio, perfecto para labels */
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">/* ==========================================================================
+   VENTANA PRINCIPAL Y FONDO / MAIN WINDOW
+   ========================================================================== */
+QMainWindow {
+    background-color: #fff6f6; /* Fondo rosa pastel sutil, descansa la vista */
+}
+
+QWidget {
+    font-family: &quot;Segoe UI&quot;, &quot;Helvetica Neue&quot;, Arial, sans-serif;
+    font-size: 13px;
+    color: #4a1521; /* Texto vino/marrón muy oscuro para un contraste premium */
+}
+
+/* ==========================================================================
+   BARRA DE MENÚ SUPERIOR (Estructuras, Type Here...) / QMENUBAR
+   ========================================================================== */
+QMenuBar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #f3d7dc; /* Línea divisoria fina */
+    padding: 4px;
+}
+
+QMenuBar::item {
+    background-color: transparent;
+    padding: 6px 14px;
+    border-radius: 4px;
+    color: #5c1d2b;
+    font-weight: 500;
+}
+
+/* Al pasar el cursor sobre las opciones del menú superior */
+QMenuBar::item:selected {
+    background-color: #fce4e8; /* Rosa suave de selección */
+    color: #b82c48; /* Texto rosa más vivo */
+}
+
+/* Al hacer clic en el menú */
+QMenuBar::item:pressed {
+    background-color: #f7cbd3;
+}
+
+/* ==========================================================================
+   MENÚS DESPLEGABLES / QMENU
+   ========================================================================== */
+QMenu {
+    background-color: #ffffff;
+    border: 1px solid #ebd0d5;
+    border-radius: 6px;
+    padding: 4px 0px;
+}
+
+QMenu::item {
+    padding: 6px 25px 6px 20px;
+    border-radius: 4px;
+    margin: 2px 4px;
+}
+
+QMenu::item:selected {
+    background-color: #da627d; /* Color rosa principal */
+    color: #ffffff;            /* Texto blanco para excelente legibilidad */
+}
+
+QMenu::separator {
+    height: 1px;
+    background-color: #f3d7dc;
+    margin: 4px 10px;
+}
+
+/* ==========================================================================
+   BOTONES / QPUSHBUTTON
+   ========================================================================== */
+QPushButton {
+    background-color: #da627d; /* Rosa viejo corporativo */
+    color: #ffffff;
+    font-weight: 600;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    padding: 8px 16px;
+    min-height: 18px;
+}
+
+QPushButton:hover {
+    background-color: #c94f6a; /* Variante un poco más oscura */
+}
+
+QPushButton:pressed {
+    background-color: #a6374e; /* Rosa profundo para simular presión */
+    padding-left: 9px; 
+    padding-top: 9px;
+}
+
+QPushButton:disabled {
+    background-color: #ebd4d8;
+    color: #a38a8e;
+}
+
+/* ==========================================================================
+   CAMPOS DE TEXTO / QLINEEDIT
+   ========================================================================== */
+QLineEdit {
+    background-color: #ffffff;
+    border: 1px solid #ebd0d5;
+    border-radius: 6px;
+    padding: 6px 12px;
+    color: #4a1521;
+    selection-background-color: #da627d;
+    selection-color: #ffffff;
+}
+
+QLineEdit:focus {
+    border: 2px solid #da627d; /* Resalta al escribir */
+}
+
+/* ==========================================================================
+   ETIQUETAS / QLABEL
+   ========================================================================== */
+QLabel {
+    background-color: transparent;
+    font-weight: 500;
+    color: #5c1d2b;
+}</string>
+   </property>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuEstructuras">
+    <property name="title">
+     <string>Estructuras</string>
+    </property>
+    <widget class="QMenu" name="menuLineales">
+     <property name="title">
+      <string>Lineales </string>
+     </property>
+     <addaction name="actionLista_Enlazada"/>
+    </widget>
+    <addaction name="menuLineales"/>
+    <addaction name="separator"/>
+    <addaction name="actionSalir"/>
+   </widget>
+   <addaction name="menuEstructuras"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionSalir">
+   <property name="text">
+    <string>Salir</string>
+   </property>
+  </action>
+  <action name="actionLista_Enlazada">
+   <property name="text">
+    <string>Lista Enlazada</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

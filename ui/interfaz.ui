@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>795</width>
+    <height>554</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* ==========================================================================
+   CONFIGURACIÓN GENERAL / GENERAL STYLES
+   ========================================================================== */
+QWidget {
+    background-color: #fff5f5; /* Fondo rosa pastel sumamente sutil y limpio */
+    font-family: &quot;Segoe UI&quot;, &quot;Helvetica Neue&quot;, Arial, sans-serif;
+    font-size: 14px;
+    color: #4c1d24; /* Café/vino muy oscuro para un contraste suave y legible */
+}
+
+/* ==========================================================================
+   ETIQUETAS / QLABEL
+   ========================================================================== */
+QLabel {
+    background-color: transparent;
+    font-weight: 500;
+    color: #702431; /* Tono vino elegante para etiquetas */
+    padding: 2px;
+}
+
+/* Subclase opcional para títulos destacados */
+QLabel#sectionTitle {
+    font-size: 18px;
+    font-weight: bold;
+    color: #4c1d24;
+    padding-bottom: 8px;
+}
+
+/* ==========================================================================
+   CAMPOS DE TEXTO / QLINEEDIT
+   ========================================================================== */
+QLineEdit {
+    background-color: #ffffff;
+    border: 1px solid #f3d9dc; /* Borde rosa suave */
+    border-radius: 6px; /* Bordes redondeados modernos */
+    padding: 6px 12px;
+    color: #4c1d24;
+    selection-background-color: #da627d; /* Color rosa intenso para texto seleccionado */
+    selection-color: #ffffff;
+}
+
+/* Estado: Al hacer clic o enfocar el campo */
+QLineEdit:focus {
+    border: 2px solid #da627d; /* Borde rosa más vivo y definido */
+    background-color: #ffffff;
+}
+
+/* Estado: Deshabilitado */
+QLineEdit:disabled {
+    background-color: #f9f1f2;
+    color: #a38a8e;
+    border: 1px solid #e9dadc;
+}
+
+/* ==========================================================================
+   BOTONES / QPUSHBUTTON
+   ========================================================================== */
+QPushButton {
+    background-color: #da627d; /* Rosa viejo/magenta elegante (color principal) */
+    color: #ffffff;
+    font-weight: 600;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    padding: 8px 16px;
+    outline: none;
+}
+
+/* Estado: Pasar el cursor por encima (Hover) */
+QPushButton:hover {
+    background-color: #a53850; /* Un rosa/vino más oscuro para denotar interacción */
+}
+
+/* Estado: Al hacer clic (Pressed) */
+QPushButton:pressed {
+    background-color: #86273c; /* Tono vino profundo para simular profundidad física */
+    padding-left: 9px; /* Efecto sutil de hundimiento */
+    padding-top: 9px;
+}
+
+/* Estado: Deshabilitado */
+QPushButton:disabled {
+    background-color: #ebd4d8;
+    color: #a38a8e;
+    border: 1px solid #dfc5c9;
+}</string>
+  </property>
+  <widget class="QPushButton" name="btn_agregarI">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>70</y>
+     <width>131</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Agregar Inicio</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_agregarf">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>70</y>
+     <width>131</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Agregar Final</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_eliminari">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>70</y>
+     <width>131</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Eliminar Inicio</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_imprimir">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>70</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Imprimir</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_eliminarf">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>70</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Eliminar Final</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_buscar">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>70</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Buscar</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>170</y>
+     <width>131</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Dato :</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txt_dato">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>180</y>
+     <width>201</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_resultado">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>300</y>
+     <width>671</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
