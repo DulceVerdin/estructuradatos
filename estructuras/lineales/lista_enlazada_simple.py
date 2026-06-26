@@ -97,3 +97,61 @@ class LinkedList(object):
             print(f" {temp.data} ->", end="")
             temp = temp.next
         print("<- Tail")
+
+#--------Pila-------
+
+class PushElemento:
+    def __init__(self, pila):
+        self.pila = pila
+        self.elemento = ""
+
+    def ejecutar(self, elemento):
+        self.elemento = elemento
+        self.pila.push(elemento)
+
+
+class PopElemento:
+    def __init__(self, pila):
+        self.pila = pila
+        self.resultado = ""
+
+    def ejecutar(self):
+        eliminado = self.pila.pop()
+        if eliminado is not None:
+            self.resultado = f"Elemento '{eliminado}' extraído de la pila."
+        else:
+            self.resultado = "La pila está vacía. Nada que extraer (Stack Underflow)."
+
+
+class TopOfStackElemento:
+    def __init__(self, pila):
+        self.pila = pila
+        self.resultado = ""
+
+    def ejecutar(self):
+        cima = self.pila.top_of_stack()
+        if cima is not None:
+            self.resultado = f"El elemento en la cima (Top) es: '{cima}'"
+        else:
+            self.resultado = "La pila está vacía. No hay elementos en la cima."
+
+
+class MostrarPila:
+    def __init__(self, pila):
+        self.pila = pila
+        self.resultado = ""
+
+    def ejecutar(self):
+        if self.pila.top is None:
+            self.resultado = "La pila está vacía."
+            return
+
+        temp = self.pila.top
+        cajas = []
+        # Recorremos la pila de forma vertical para el reporte
+        while temp is not None:
+            cajas.append(f"[ {temp.data} ]")
+            temp = temp.next
+        
+        # Unimos las cajas con saltos de línea para mantener la estética visual de una pila
+        self.resultado = "--- Cima de la Pila ---\n" + "\n".join(cajas) + "\n-----------------------"

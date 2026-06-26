@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>683</width>
+    <height>434</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* --- ESTILO GENERAL DE LA INTERFAZ --- */
+QWidget {
+    background-color: #FAFAFA;
+    font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+    font-size: 14px;
+    color: #333333;
+}
+
+/* --- ESTILO DE LOS LABELS (ETIQUETAS) --- */
+QLabel {
+    font-weight: 600;
+    color: #4A4A4A;
+    background: transparent;
+    padding: 2px;
+}
+
+/* --- ESTILO DEL LINE EDIT (CAMPO DE TEXTO) --- */
+QLineEdit {
+    background-color: #FFFFFF;
+    border: 2px solid #E0E0E0;
+    border-radius: 6px;
+    padding: 8px 12px;
+    color: #333333;
+    selection-background-color: #FFB6C1;
+}
+
+/* Cuando el usuario hace clic para escribir (Focus) */
+QLineEdit:focus {
+    border: 2px solid #FF8DA1; /* Rosa vibrante pero sofisticado */
+    background-color: #FFF5F7; /* Un sutil fondo rosa claro */
+}
+
+/* Si el campo está deshabilitado */
+QLineEdit:disabled {
+    background-color: #F2F2F2;
+    color: #A0A0A0;
+    border-color: #E0E0E0;
+}
+
+/* --- ESTILO DEL PUSH BUTTON (BOTÓN) --- */
+QPushButton {
+    background-color: #FF8DA1;
+    color: #FFFFFF;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    min-width: 80px;
+}
+
+/* Cuando el usuario pasa el mouse por encima (Hover) */
+QPushButton:hover {
+    background-color: #FFA3B5; /* Rosa un poco más claro */
+}
+
+/* Cuando el usuario hace clic (Pressed) */
+QPushButton:pressed {
+    background-color: #E07387; /* Rosa más oscuro para dar efecto de hundido */
+    padding-left: 11px; /* Efecto visual de clic */
+    padding-top: 11px;
+}
+
+/* Si el botón está deshabilitado */
+QPushButton:disabled {
+    background-color: #E0E0E0;
+    color: #A0A0A0;
+}</string>
+  </property>
+  <widget class="QPushButton" name="btn_push">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>40</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Push</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_pop">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>40</y>
+     <width>151</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Pop</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_top">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>40</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Top</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_print">
+   <property name="geometry">
+    <rect>
+     <x>479</x>
+     <y>40</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Print</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>160</y>
+     <width>91</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Dato :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_resultado">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>290</y>
+     <width>421</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>245</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Pila :</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txt_dato">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>160</y>
+     <width>131</width>
+     <height>41</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
