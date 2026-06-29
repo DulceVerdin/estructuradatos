@@ -1,8 +1,13 @@
-from estructuras.lineales.nodo import Node
 
+from estructuras.lineales.nodo import Node
 class Stack(object):
     def __init__(self):
         self.top = None
+
+# pregunta si la pila esta bacia o no 
+    def is_empt(self):
+        return self.top in None
+
 
     def push(self, data):
         
@@ -14,7 +19,7 @@ class Stack(object):
     def pop(self):
         if self.top is None:
             return None
-
+ 
         valor = self.top.data
         self.top = self.top.next
 
@@ -41,3 +46,7 @@ class Stack(object):
             print(f"[ {temp.data} ]")
             temp = temp.next
         print("-----------------------")
+
+
+    
+    

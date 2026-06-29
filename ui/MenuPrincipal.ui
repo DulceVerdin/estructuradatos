@@ -292,6 +292,7 @@ QLabel {
       <string>Stack</string>
      </property>
      <addaction name="actionPila_2"/>
+     <addaction name="actionconvercion_infija_posfija"/>
     </widget>
     <addaction name="menuLineales"/>
     <addaction name="menuStack"/>
@@ -319,6 +320,11 @@ QLabel {
   <action name="actionPila_2">
    <property name="text">
     <string>Pila</string>
+   </property>
+  </action>
+  <action name="actionconvercion_infija_posfija">
+   <property name="text">
+    <string>convercion infija-posfija</string>
    </property>
   </action>
  </widget>

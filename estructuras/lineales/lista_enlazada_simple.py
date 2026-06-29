@@ -100,6 +100,7 @@ class LinkedList(object):
 
 #--------Pila-------
 
+
 class PushElemento:
     def __init__(self, pila):
         self.pila = pila
@@ -155,3 +156,4 @@ class MostrarPila:
         
         # Unimos las cajas con saltos de línea para mantener la estética visual de una pila
         self.resultado = "--- Cima de la Pila ---\n" + "\n".join(cajas) + "\n-----------------------"
+        

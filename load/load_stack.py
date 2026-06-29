@@ -1,11 +1,10 @@
 from PyQt5.QtWidgets import QDialog
 from PyQt5 import uic
-
 from estructuras.lineales.stack import Stack
 from estructuras.lineales.lista_enlazada_simple import (
     PushElemento,
     PopElemento,
-    TopOfStackElemento,
+    TopOfStackElemento, 
     MostrarPila
 )
 

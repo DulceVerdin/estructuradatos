@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>530</width>
+    <height>376</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* ==========================================================================
+   ESTILO GENERAL DE LA APLICACIÓN
+   ========================================================================== */
+QWidget {
+    font-family: &quot;Segoe UI&quot;, &quot;Helvetica Neue&quot;, Arial, sans-serif;
+    font-size: 14px;
+    color: #4A3E41; /* Un gris oscuro con un toque cálido/marrón para suavizar */
+}
+
+/* ==========================================================================
+   ETIQUETAS (QLabel)
+   ========================================================================== */
+QLabel {
+    font-weight: 600;
+    color: #5C4A4E;
+    background-color: transparent;
+    padding: 2px;
+}
+
+/* ==========================================================================
+   CAMPOS DE TEXTO (QLineEdit)
+   ========================================================================== */
+QLineEdit {
+    background-color: #FFFFFF;
+    border: 2px solid #F3D1D9; /* Rosa pastel suave */
+    border-radius: 8px; /* Bordes redondeados modernos */
+    padding: 6px 12px;
+    color: #4A3E41;
+    selection-background-color: #FFB3C6;
+}
+
+/* Cuando el usuario hace clic o está editando el campo */
+QLineEdit:focus {
+    border: 2px solid #FF8FAB; /* Rosa más intenso para denotar actividad */
+    background-color: #FFF0F3; /* Un levísimo fondo rosa */
+}
+
+/* Cuando el campo está deshabilitado */
+QLineEdit:disabled {
+    background-color: #F8F9FA;
+    border-color: #E9ECEF;
+    color: #ADB5BD;
+}
+
+/* ==========================================================================
+   BOTONES (QPushButton)
+   ========================================================================== */
+QPushButton {
+    background-color: #FF8FAB; /* Rosa principal vibrante pero elegante */
+    color: #FFFFFF;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 18px;
+    min-height: 20px;
+}
+
+/* Cuando el usuario pasa el mouse por encima del botón */
+QPushButton:hover {
+    background-color: #FF7597; /* Rosa un poco más oscuro */
+}
+
+/* Cuando el usuario hace clic en el botón */
+QPushButton:pressed {
+    background-color: #E05E7F; /* Rosa más profundo para simular hundimiento */
+    padding-top: 9px; /* Efecto sutil de pulsación */
+    padding-bottom: 7px;
+}
+
+/* Cuando el botón está deshabilitado */
+QPushButton:disabled {
+    background-color: #ECD2D8;
+    color: #FFFFFF;
+}</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>130</y>
+     <width>131</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Exprecion infija :</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txt_exprecion">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>120</y>
+     <width>231</width>
+     <height>51</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_convertir">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>230</y>
+     <width>111</width>
+     <height>36</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Convertir</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_resultado">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>290</y>
+     <width>491</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
