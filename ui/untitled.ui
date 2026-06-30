@@ -108,7 +108,7 @@ QPushButton:disabled {
      <x>190</x>
      <y>120</y>
      <width>231</width>
-     <height>51</height>
+     <height>31</height>
     </rect>
    </property>
   </widget>
@@ -128,9 +128,9 @@ QPushButton:disabled {
   <widget class="QLabel" name="lbl_resultado">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>290</y>
-     <width>491</width>
+     <x>180</x>
+     <y>280</y>
+     <width>321</width>
      <height>81</height>
     </rect>
    </property>
@@ -139,6 +139,19 @@ QPushButton:disabled {
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>310</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Expresion posfija:</string>
    </property>
   </widget>
  </widget>

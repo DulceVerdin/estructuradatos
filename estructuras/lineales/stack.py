@@ -4,9 +4,10 @@ class Stack(object):
     def __init__(self):
         self.top = None
 
-# pregunta si la pila esta bacia o no 
-    def is_empt(self):
-        return self.top in None
+# pregunta si la pila esta vacia o no 
+    def is_empty(self):
+        return self.top is None
+
 
 
     def push(self, data):
