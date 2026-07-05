@@ -14,86 +14,65 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">/* ==========================================================================
-   ESTILO GENERAL DE LA APLICACIÓN
-   ========================================================================== */
-QWidget {
-    font-family: &quot;Segoe UI&quot;, &quot;Helvetica Neue&quot;, Arial, sans-serif;
-    font-size: 14px;
-    color: #4A3E41; /* Un gris oscuro con un toque cálido/marrón para suavizar */
+   <string notr="true">/* 1. Fondo principal de la ventana */
+QDialog {
+    background-color: #e06385; /* Color rosa/coral del fondo */
 }
 
-/* ==========================================================================
-   ETIQUETAS (QLabel)
-   ========================================================================== */
+/* 2. Etiquetas de texto normales (como &quot;Ingresa una Expresión Infija:&quot;) */
 QLabel {
-    font-weight: 600;
-    color: #5C4A4E;
-    background-color: transparent;
-    padding: 2px;
-}
-
-/* ==========================================================================
-   CAMPOS DE TEXTO (QLineEdit)
-   ========================================================================== */
-QLineEdit {
-    background-color: #FFFFFF;
-    border: 2px solid #F3D1D9; /* Rosa pastel suave */
-    border-radius: 8px; /* Bordes redondeados modernos */
-    padding: 6px 12px;
-    color: #4A3E41;
-    selection-background-color: #FFB3C6;
-}
-
-/* Cuando el usuario hace clic o está editando el campo */
-QLineEdit:focus {
-    border: 2px solid #FF8FAB; /* Rosa más intenso para denotar actividad */
-    background-color: #FFF0F3; /* Un levísimo fondo rosa */
-}
-
-/* Cuando el campo está deshabilitado */
-QLineEdit:disabled {
-    background-color: #F8F9FA;
-    border-color: #E9ECEF;
-    color: #ADB5BD;
-}
-
-/* ==========================================================================
-   BOTONES (QPushButton)
-   ========================================================================== */
-QPushButton {
-    background-color: #FF8FAB; /* Rosa principal vibrante pero elegante */
-    color: #FFFFFF;
+    color: #1a1a1a;
+    font-size: 10pt;
     font-weight: bold;
-    border: none;
-    border-radius: 8px;
+    font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+}
+
+/* 3. El recuadro grande de abajo donde se muestran los resultados */
+/* NOTA: Cambia #lbl_resultado y #lbl_resultado2 por los objectName de tus etiquetas */
+#lbl_resultado, #lbl_resultado2 {
+    background-color: #fae1e6; /* Rosa extremadamente claro/blanquecino */
+    border: 2px dashed #c93b63; /* Borde punteado sutil como el de la foto */
+    border-radius: 12px;        /* Esquinas muy redondeadas */
+    color: #212121;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+/* 4. Caja de texto para ingresar la expresión (Line Edit) */
+QLineEdit {
+    background-color: #ffffff;  /* Fondo completamente blanco */
+    border: 1px solid #c93b63;
+    border-radius: 6px;         /* Esquinas redondeadas suaves */
+    padding: 5px 10px;
+    color: #212121;
+    font-size: 11pt;
+}
+
+/* 5. Botones (Push Buttons) */
+QPushButton {
+    background-color: #c93b63;  /* Rosa fuerte/fucsia oscuro del botón */
+    color: #ffffff;             /* Texto blanco */
+    border-radius: 8px;         /* Esquinas redondeadas */
+    font-weight: bold;
+    font-size: 10pt;
     padding: 8px 18px;
-    min-height: 20px;
 }
 
-/* Cuando el usuario pasa el mouse por encima del botón */
+/* Efecto visual cuando pasas el mouse por encima del botón */
 QPushButton:hover {
-    background-color: #FF7597; /* Rosa un poco más oscuro */
+    background-color: #b02f53;
 }
 
-/* Cuando el usuario hace clic en el botón */
+/* Efecto visual cuando haces clic en el botón */
 QPushButton:pressed {
-    background-color: #E05E7F; /* Rosa más profundo para simular hundimiento */
-    padding-top: 9px; /* Efecto sutil de pulsación */
-    padding-bottom: 7px;
-}
-
-/* Cuando el botón está deshabilitado */
-QPushButton:disabled {
-    background-color: #ECD2D8;
-    color: #FFFFFF;
+    background-color: #942342;
 }</string>
   </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>130</y>
+     <y>20</y>
      <width>131</width>
      <height>16</height>
     </rect>
@@ -105,8 +84,8 @@ QPushButton:disabled {
   <widget class="QLineEdit" name="txt_exprecion">
    <property name="geometry">
     <rect>
-     <x>190</x>
-     <y>120</y>
+     <x>140</x>
+     <y>20</y>
      <width>231</width>
      <height>31</height>
     </rect>
@@ -115,8 +94,8 @@ QPushButton:disabled {
   <widget class="QPushButton" name="btn_convertir">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>230</y>
+     <x>390</x>
+     <y>20</y>
      <width>111</width>
      <height>36</height>
     </rect>
@@ -129,9 +108,9 @@ QPushButton:disabled {
    <property name="geometry">
     <rect>
      <x>180</x>
-     <y>280</y>
+     <y>130</y>
      <width>321</width>
-     <height>81</height>
+     <height>61</height>
     </rect>
    </property>
    <property name="text">
@@ -145,13 +124,55 @@ QPushButton:disabled {
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>310</y>
+     <y>150</y>
      <width>131</width>
      <height>31</height>
     </rect>
    </property>
    <property name="text">
     <string>Expresion posfija:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>200</y>
+     <width>161</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_resultado2">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>320</y>
+     <width>471</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_evaluar">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>240</y>
+     <width>131</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Evaluar</string>
    </property>
   </widget>
  </widget>
