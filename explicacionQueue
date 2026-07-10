@@ -1,0 +1,13 @@
+Una Queue (o Cola) es una estructura de datos lineal y dinámica que sirve para almacenar elementos de forma secuencial.
+
+Su comportamiento se basa estrictamente por el principio FIFO (First In, First Out), que en español significa "Primero en entrar, primero en salir".
+
+El comportamiento FIFO
+Para entenderlo de forma sencilla, imagina la fila de un banco o de un supermercado: la primera persona que llega es la primera en ser atendida y la primera en irse. Las personas nuevas que llegan no pueden colarse; deben formarse obligatoriamente al final de la línea.
+
+Operaciones principales:
+Enqueue (Encolar): Agrega un elemento al final (rear/last) de la cola.
+
+Dequeue (Desencolar): Elimina y devuelve el elemento que está al inicio (front/first) de la cola, ya que es el que más tiempo lleva esperando.
+
+¿Dónde se usa? Es la estructura ideal para escenarios del mundo real y digital donde el orden de llegada debe respetarse de forma justa, como la cola de impresión de una oficina, la gestión de procesos en un sistema operativo o el envío de mensajes en redes de comunicación.

@@ -1,3 +1,4 @@
+
 import sys
 from PyQt5.QtWidgets import QApplication 
 from load.load_MenuPrincipal import MenuPrincipal  
@@ -11,3 +12,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+

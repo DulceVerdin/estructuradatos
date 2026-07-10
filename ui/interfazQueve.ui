@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>601</width>
+    <height>417</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* Fondo del Dialog principal */
+QDialog {
+    background-color: #D85A77; /* Un rosa magenta saturado pero maduro y elegante */
+    font-family: &quot;Segoe UI&quot;, -apple-system, Arial, sans-serif;
+}
+
+/* Etiquetas de texto estáticas */
+QLabel {
+    color: #FFFFFF; /* Texto blanco para un contraste limpio y profesional */
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Cuadros de resultado (Cambia 'label_posfija' y 'label_resultado' por tus ObjectName) */
+QLabel#label_posfija, QLabel#label_resultado {
+    background-color: #FCEAEF; /* Fondo rosa muy claro para hacer destacar el resultado */
+    border: none;
+    border-radius: 12px; /* Bordes notablemente redondeados */
+    color: #4A1521; /* Texto ultra oscuro para lectura fácil */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px;
+    qproperty-alignment: 'AlignCenter';
+}
+
+/* Caja de texto (Input) */
+QLineEdit {
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    color: #333333;
+    font-size: 13px;
+}
+
+QLineEdit:focus {
+    background-color: #FFF2F5;
+}
+
+/* Botones */
+QPushButton {
+    background-color: #63192B; /* Botones guinda/vino oscuro que contrastan hermoso con el rosa */
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 18px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #7A2237;
+}
+
+QPushButton:pressed {
+    background-color: #4D111F;
+}</string>
+  </property>
+  <widget class="QPushButton" name="btn_enqueue">
+   <property name="geometry">
+    <rect>
+     <x>-10</x>
+     <y>30</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Enqueve</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_dequeue">
+   <property name="geometry">
+    <rect>
+     <x>-10</x>
+     <y>70</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Dequeve</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_fristqueue">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>120</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>FirstQueve</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_lastqueue">
+   <property name="geometry">
+    <rect>
+     <x>-10</x>
+     <y>160</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>LastQueve</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_printqueve">
+   <property name="geometry">
+    <rect>
+     <x>-10</x>
+     <y>200</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>PrintQueve</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_isempty">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>250</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>is Empty</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>170</y>
+     <width>111</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Ingresa el dato :</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txt_dato">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>170</y>
+     <width>161</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_resultado">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>250</y>
+     <width>371</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
