@@ -294,6 +294,7 @@ QLabel {
      <addaction name="actionPila_2"/>
      <addaction name="actionconvercion_infija_posfija"/>
      <addaction name="actionQueue"/>
+     <addaction name="actionBanco"/>
     </widget>
     <addaction name="menuLineales"/>
     <addaction name="menuStack"/>
@@ -331,6 +332,11 @@ QLabel {
   <action name="actionQueue">
    <property name="text">
     <string>Queue</string>
+   </property>
+  </action>
+  <action name="actionBanco">
+   <property name="text">
+    <string>Banco</string>
    </property>
   </action>
  </widget>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>605</width>
+    <height>563</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* Estilo para el diálogo principal */
+QDialog {
+    background-color: #FCE4EC; /* Rosa pastel muy suave */
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 14px;
+}
+
+/* Estilo para los botones */
+QPushButton {
+    background-color: #D81B60; /* Fucsia intenso para acento */
+    color: white;
+    border-radius: 10px;
+    padding: 10px 15px;
+    border: none;
+    font-weight: bold;
+    text-align: left; /* Alinear texto e icono a la izquierda */
+}
+
+/* Efecto al pasar el ratón por encima de los botones */
+QPushButton:hover {
+    background-color: #AD1457; /* Un tono más oscuro */
+}
+
+/* Efecto al presionar los botones */
+QPushButton:pressed {
+    background-color: #880E4F; /* Aún más oscuro */
+    padding-left: 12px; /* Pequeño efecto de desplazamiento */
+    padding-top: 12px;
+}
+
+/* Estilo para el campo de entrada de texto */
+QLineEdit {
+    background-color: #FFFDE7; /* Crema muy suave */
+    border: 1px solid #C2185B;
+    border-radius: 8px;
+    padding: 8px;
+    color: #333;
+}
+
+QLineEdit:focus {
+    border: 2px solid #D81B60; /* Borde más grueso al enfocar */
+}
+
+/* Estilo para el área de texto grande (registro) */
+QTextEdit {
+    background-color: #FFFDE7; /* Crema muy suave */
+    border: 2px solid #C2185B;
+    border-radius: 10px;
+    padding: 10px;
+    color: #333;
+    font-family: &quot;Consolas&quot;, monospace; /* Fuente monoespaciada para logs */
+    font-size: 13px;
+}
+
+/* Estilo para las etiquetas de texto */
+QLabel {
+    color: #444;
+    background: transparent;
+}</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cliente :</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_atender">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>160</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Atender</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_cerrar">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>330</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cerrar</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="txt_lista_espera">
+   <property name="geometry">
+    <rect>
+     <x>13</x>
+     <y>90</y>
+     <width>241</width>
+     <height>191</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_turno">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>30</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Turno</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>70</y>
+     <width>47</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txt_cliente">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>30</y>
+     <width>171</width>
+     <height>41</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_mensaje">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>309</y>
+     <width>141</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>306</x>
+     <y>350</y>
+     <width>111</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Clientes atendidos :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_cant_atendidos">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>350</y>
+     <width>47</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>296</x>
+     <y>420</y>
+     <width>111</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Promedio de espera :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_promedio">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>420</y>
+     <width>47</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

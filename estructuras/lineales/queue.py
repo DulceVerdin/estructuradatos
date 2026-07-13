@@ -1,5 +1,6 @@
 from estructuras.lineales.lista_enlazada_simple import LinkedList
 
+
 class Queue:
     def __init__(self):
         self.lista = LinkedList()
