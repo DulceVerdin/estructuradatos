@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>InterfazImpresion</class>
+ <widget class="QDialog" name="InterfazImpresion">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Cola de Impresión</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* 1. Fondo principal de la ventana */
+QDialog {
+    background-color: #e06385; /* Color rosa/coral del fondo */
+}
+
+/* 2. Etiquetas de texto normales (como &quot;Ingresa una Expresión Infija:&quot;) */
+QLabel {
+    color: #1a1a1a;
+    font-size: 10pt;
+    font-weight: bold;
+    font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+}
+
+/* 3. El recuadro grande de abajo donde se muestran los resultados */
+/* NOTA: Cambia #lbl_resultado y #lbl_resultado2 por los objectName de tus etiquetas */
+#lbl_resultado, #lbl_resultado2 {
+    background-color: #fae1e6; /* Rosa extremadamente claro/blanquecino */
+    border: 2px dashed #c93b63; /* Borde punteado sutil como el de la foto */
+    border-radius: 12px;        /* Esquinas muy redondeadas */
+    color: #212121;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+/* 4. Caja de texto para ingresar la expresión (Line Edit) */
+QLineEdit {
+    background-color: #ffffff;  /* Fondo completamente blanco */
+    border: 1px solid #c93b63;
+    border-radius: 6px;         /* Esquinas redondeadas suaves */
+    padding: 5px 10px;
+    color: #212121;
+    font-size: 11pt;
+}
+
+/* 5. Botones (Push Buttons) */
+QPushButton {
+    background-color: #c93b63;  /* Rosa fuerte/fucsia oscuro del botón */
+    color: #ffffff;             /* Texto blanco */
+    border-radius: 8px;         /* Esquinas redondeadas */
+    font-weight: bold;
+    font-size: 10pt;
+    padding: 8px 18px;
+}
+
+/* Efecto visual cuando pasas el mouse por encima del botón */
+QPushButton:hover {
+    background-color: #b02f53;
+}
+
+/* Efecto visual cuando haces clic en el botón */
+QPushButton:pressed {
+    background-color: #942342;
+}</string>
+  </property>
+  <widget class="QLineEdit" name="txt_usuario">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>200</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Usuario</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txt_documento">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>60</y>
+     <width>200</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Documento</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txt_paginas">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>100</y>
+     <width>200</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Número de páginas</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_agregar">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>20</y>
+     <width>200</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Agregar a la cola</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_imprimir">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>60</y>
+     <width>200</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Imprimir siguiente</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_consultar">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>100</y>
+     <width>200</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Consultar frente</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tbl_trabajos">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>150</y>
+     <width>430</width>
+     <height>150</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_total">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>310</y>
+     <width>200</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>0 trabajos pendientes</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_mensajes">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>340</y>
+     <width>430</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Mensajes del sistema...</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
