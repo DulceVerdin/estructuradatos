@@ -3,3 +3,6 @@ class NodeTree:
         self.value = value
         self.left = None
         self.right = None
+
+
+        

@@ -7,6 +7,7 @@ from load.load_convercion import LoadInterfazPila
 from load.load_queue import LoadInterfazQueue
 from load.load_banco import LoadBanco
 from load.load_imprecion import   LoadColaImpresion
+from load.load_binarytree import LoadEvaluadorArbol
 
 
 class MenuPrincipal(QMainWindow):
@@ -21,6 +22,7 @@ class MenuPrincipal(QMainWindow):
         self.actionQueue.triggered.connect(self.abrir_queue)
         self.actionBanco.triggered.connect(self.abrir_banco)
         self.actionGestor_de_impresion.triggered.connect(self.abrir_impresion)
+        self.actionbinarytree.triggered.connect(self.abrir_evaluador_arbol)
         
     def abrir_interfaz(self):
         self.interfaz = LoadInterfaz()
@@ -42,6 +44,18 @@ class MenuPrincipal(QMainWindow):
       self.banco = LoadBanco()
       self.banco.exec()
     
+    def abrir_evaluador_arbol(self):
+        self.evaluador_arbol = LoadEvaluadorArbol()
+        self.evaluador_arbol.exec()
+
     def abrir_impresion(self):
         self.impresion = LoadColaImpresion()
         self.impresion.exec()
+
+
+
+
+
+
+
+        

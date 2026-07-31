@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EvaluadorArboles</class>
+ <widget class="QWidget" name="EvaluadorArboles">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>560</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Evaluador de Árboles de Expresión</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* Fondo principal de la ventana */
+QWidget#EvaluadorArboles {
+    background-color: #e06385;
+    font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+}
+
+/* Etiquetas de texto generales */
+QLabel {
+    color: #ffffff;
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+/* Caja de entrada (QLineEdit) */
+QLineEdit {
+    background-color: #ffffff;
+    border: 2px solid #c93b63;
+    border-radius: 8px;
+    padding: 5px 10px;
+    color: #212121;
+    font-size: 10pt;
+}
+
+/* Botones principales */
+QPushButton {
+    background-color: #c93b63;
+    color: #ffffff;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 10pt;
+    padding: 6px 12px;
+}
+
+QPushButton:hover {
+    background-color: #b02f53;
+}
+
+QPushButton:pressed {
+    background-color: #942342;
+}
+
+/* Marco de Resultados y Caja de Texto del Árbol */
+QFrame#frame_resultados, QTextEdit#txt_tree {
+    background-color: #fae1e6;
+    border: 2px dashed #c93b63;
+    border-radius: 12px;
+    color: #212121;
+}
+
+/* Ajuste de fuente para el árbol visual */
+QTextEdit#txt_tree {
+    font-family: &quot;Consolas&quot;, &quot;Courier New&quot;, monospace;
+    font-size: 11pt;
+    padding: 8px;
+}
+
+/* Texto dentro del cuadro de resultados */
+QFrame#frame_resultados QLabel {
+    color: #212121;
+    font-size: 9pt;
+}
+</string>
+  </property>
+  <widget class="QLabel" name="lbl_instruccion">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>200</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Expresión Postfija:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txt_input">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>45</y>
+     <width>460</width>
+     <height>35</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame_resultados">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>95</y>
+     <width>460</width>
+     <height>130</height>
+    </rect>
+   </property>
+   <widget class="QLabel" name="lbl_tag_inorden">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>15</y>
+      <width>130</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Inorden:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_inorden">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>15</y>
+      <width>290</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>-</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_tag_preorden">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>40</y>
+      <width>130</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Preorden:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_preorden">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>40</y>
+      <width>290</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>-</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_tag_posorden">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>65</y>
+      <width>130</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Posorden:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_posorden">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>65</y>
+      <width>290</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>-</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_tag_resultado">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>90</y>
+      <width>130</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Resultado Evaluado:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_resultado">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>90</y>
+      <width>290</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>-</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="lbl_tag_arbol">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>240</y>
+     <width>200</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Estructura del Árbol:</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="txt_tree">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>265</y>
+     <width>460</width>
+     <height>220</height>
+    </rect>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_procesar">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>500</y>
+     <width>140</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Procesar</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_limpiar">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>500</y>
+     <width>140</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Limpiar</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_salir">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>500</y>
+     <width>140</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Salir</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

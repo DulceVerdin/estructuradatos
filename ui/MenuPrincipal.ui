@@ -297,10 +297,19 @@ QLabel {
      <addaction name="actionBanco"/>
      <addaction name="actionGestor_de_impresion"/>
     </widget>
+    <widget class="QMenu" name="menuNo_lineales">
+     <property name="title">
+      <string>No lineales</string>
+     </property>
+     <addaction name="actionbinarytree"/>
+    </widget>
     <addaction name="menuLineales"/>
     <addaction name="menuStack"/>
     <addaction name="separator"/>
     <addaction name="actionSalir_2"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="menuNo_lineales"/>
    </widget>
    <addaction name="menuEstructuras"/>
   </widget>
@@ -343,6 +352,11 @@ QLabel {
   <action name="actionGestor_de_impresion">
    <property name="text">
     <string>Gestor de impresion</string>
+   </property>
+  </action>
+  <action name="actionbinarytree">
+   <property name="text">
+    <string>binarytree</string>
    </property>
   </action>
  </widget>
