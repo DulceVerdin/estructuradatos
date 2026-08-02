@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GraphWindow</class>
+ <widget class="QWidget" name="GraphWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1050</width>
+    <height>760</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Grafos no dirigidos</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayoutMain">
+   <property name="spacing">
+    <number>6</number>
+   </property>
+   <property name="leftMargin">
+    <number>8</number>
+   </property>
+   <property name="topMargin">
+    <number>8</number>
+   </property>
+   <property name="rightMargin">
+    <number>8</number>
+   </property>
+   <property name="bottomMargin">
+    <number>8</number>
+   </property>
+   <item>
+    <widget class="QLabel" name="lblTitle">
+     <property name="text">
+      <string>Grafos no dirigidos</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayoutTop">
+     <property name="spacing">
+      <number>8</number>
+     </property>
+     <item>
+      <widget class="QGroupBox" name="groupVertices">
+       <property name="title">
+        <string>Vértices</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayoutVertices">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayoutAddVertex">
+          <item>
+           <widget class="QLineEdit" name="txtVertex">
+            <property name="placeholderText">
+             <string>Nombre del vértice</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnAddVertex">
+            <property name="text">
+             <string>Agregar vértice</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayoutDeleteVertex">
+          <item>
+           <widget class="QComboBox" name="cmbVertex"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnDeleteVertex">
+            <property name="text">
+             <string>Eliminar vértice</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="groupEdges">
+       <property name="title">
+        <string>Arcos</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayoutEdges">
+        <item row="0" column="0">
+         <widget class="QLabel" name="lblOrigin">
+          <property name="text">
+           <string>Vértice 1</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QComboBox" name="cmbOrigin"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="lblDestination">
+          <property name="text">
+           <string>Vértice 2</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="cmbDestination"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QPushButton" name="btnAddEdge">
+          <property name="text">
+           <string>Agregar arco</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QPushButton" name="btnDeleteEdge">
+          <property name="text">
+           <string>Eliminar arco</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTabWidget" name="tabMainGraph">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tabVisual">
+      <attribute name="title">
+       <string>Representación visual</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayoutVisualTab">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayoutRedraw">
+         <item>
+          <spacer name="horizontalSpacerRedraw">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnRedrawGraph">
+           <property name="text">
+            <string>Redibujar</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QGraphicsView" name="graphicsViewGraph"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabMatrix">
+      <attribute name="title">
+       <string>Matriz de adyacencia</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayoutMatrixTab">
+       <item>
+        <widget class="QTableWidget" name="tblAdjacencyMatrix"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabAdjacencyList">
+      <attribute name="title">
+       <string>Lista de adyacencia</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayoutAdjacencyListTab">
+       <item>
+        <widget class="QPlainTextEdit" name="txtAdjacencyList"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabEdges">
+      <attribute name="title">
+       <string>Lista de arcos</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayoutEdgesTab">
+       <item>
+        <widget class="QTableWidget" name="tblEdges">
+         <property name="columnCount">
+          <number>2</number>
+         </property>
+         <column>
+          <property name="text">
+           <string>Vértice 1</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Vértice 2</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayoutBottom">
+     <item>
+      <widget class="QLabel" name="lblGraphStatus">
+       <property name="text">
+        <string>Vértices: 0 | Arcos: 0</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacerBottom">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnClearGraph">
+       <property name="text">
+        <string>Limpiar grafo</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
